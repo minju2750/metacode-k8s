@@ -17,12 +17,12 @@ with DAG (
 
     middle = BashOperator(
         task_id = "middle_task"
-        bash_command = "echo 'Starting Dag execution..."
+        bash_command = "echo 'Middle Dag execution..."
     )
 
     end = BashOperator(
         task_id = "end_task"
-        bash_command = "echo 'Starting Dag execution..."
+        bash_command = "echo 'end Dag execution..."
     )
     
     start >> middle >> end
